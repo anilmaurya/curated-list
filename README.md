@@ -35,7 +35,7 @@ embedded within it.
 ```
 cd {clone_dir}/web
 npm install
-npm run-script watch
+npm run-script start
 
 cd {clone_dir}
 lein run

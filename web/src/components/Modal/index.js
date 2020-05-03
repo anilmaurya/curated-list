@@ -10,11 +10,22 @@ export default class Modal extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.target);
-    
-    fetch(process.env.REACT_APP_API_BASE_URL + '/winners', {
+  
+    var target = event.target;
+
+    var payload = {
+      title: target.title.value,
+      link: target.link.value,
+      category: target.category.value
+    };
+ 
+    fetch(process.env.REACT_APP_API_BASE_URL + '/lists', {
       method: 'POST',
-      body: data,
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body:  JSON.stringify(payload),
       
     }).then(res => res.json())
     .then(

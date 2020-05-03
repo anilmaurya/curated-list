@@ -10,6 +10,13 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const Button = styled.button`
+  background-color: lightskyblue;
+  height: 25px;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
 const List = styled.ul`
   display: flex;
   flex-direction: column;
@@ -74,13 +81,18 @@ class Home extends Component {
         <Modal onClose={this.showModal} show={this.state.show}>
           <h4>Title</h4>
           <input id="title" name="title" type="text" required />
+          <h4>Link</h4>
+          <input id="link" name="link" type="text" required />
+          <h4>Category</h4>
+          <input id="category" name="category" type="text" required />
         </Modal>
         
         <h1>Curated Lists</h1>
+        <Button onClick={this.showModal}>Add new item</Button>
           <List>
             {this.state.lists.map(list => (
             <ListItem>
-              <a href={list.link}>{list.title}</a>
+              <a href={list.link} target="_blank">{list.title}</a>
             </ListItem>
             ))}
           </List>
