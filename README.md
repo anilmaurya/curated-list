@@ -1,44 +1,54 @@
-# curated-list
+# List of Curated links using React / Clojure / Postgres
 
-FIXME: description
+This project is inspired from https://github.com/cbegin/react-clojure-postgres-template
 
-## Installation
+This project can be used as template to implement a technology stack intended to bootstrap rapid
+development of a web application or web service based on React, Clojure
+and Postgres.
 
-Download from http://example.com/FIXME.
+The resulting deployable artifact is a standalone executable JAR file which
+contains the complete single-page web application, including all web resources 
+embedded within it.
+
+## Features
+
+* React 16.2.0
+  * React-Router
+  * React-Bootstrap
+* Clojure 1.10.1
+  * Ring
+  * Compojure
+  * Cheshire
+
+## Prerequisites
+
+* Java 1.8+
+* Leiningen 2.6.1+
+* Node 4.4.6+
+* Postgres 9.3+
 
 ## Usage
 
-FIXME: explanation
 
-    $ java -jar curated-list-0.1.0-standalone.jar [args]
+### Run in development mode:
 
-## Options
+```
+cd {clone_dir}/web
+npm install
+npm run-script watch
 
-FIXME: listing of options this app accepts.
+cd {clone_dir}
+lein run
+```
 
-## Examples
+### Build for deployment:
 
-...
+```
+cd {clone_dir}/web
+npm run-script build
 
-### Bugs
+cd {clone_dir}
+lein ring uberjar
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2020 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+java -jar target/{jarfile}.jar
+```
