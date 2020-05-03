@@ -1,4 +1,4 @@
-(defproject template "0.2.0-SNAPSHOT"
+(defproject curated-list "0.1.0-SNAPSHOT"
   :description "List of curated links"
   :url "https://github.com/anilmaurya/curated-list"
   :dependencies [[org.clojure/clojure "1.10.1"]

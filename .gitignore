@@ -11,3 +11,4 @@ pom.xml.asc
 .hgignore
 .hg/
 web/node_modules/
+resources/public/app/*
