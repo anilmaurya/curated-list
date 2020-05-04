@@ -43,7 +43,7 @@
     (GET "/lists" [] (json {:data (list/all) }))
     (POST "/lists" {list :params} (create list))
     (route/resources "/")
-    (static-resource (ring/resource-response "app/index.html" {:root "public"}))))
+    (GET "/" [] (ring/content-type (ring/resource-response "app/index.html" {:root "public"}) "text/html"))))
 
 (def app
   (-> (app-routes)

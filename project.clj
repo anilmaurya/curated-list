@@ -1,6 +1,6 @@
 (defproject curated-list "0.1.0-SNAPSHOT"
   :description "List of curated links"
-  :url "https://github.com/anilmaurya/curated-list"
+  :url "https://curated-lists.herokuapp.com/"
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/java.jdbc "0.7.11"]
                  [org.postgresql/postgresql "9.4-1201-jdbc41"]
@@ -11,12 +11,9 @@
                  [compojure "1.6.1"]
                  [cheshire "5.10.0"]]
 
-  :ring {:handler api.routes/app
-         :port 8080}
-
   :main api.main
-
   :profiles {:dev {:dependencies [[ring/ring-mock "0.4.0"]]}
-             :uberjar {:aot :all}}
+             :uberjar {:aot :all
+                       :main api.main}}
 
   :plugins [[lein-ring "0.12.5"]])

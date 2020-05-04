@@ -48,7 +48,15 @@ cd {clone_dir}/web
 npm run-script build
 
 cd {clone_dir}
-lein ring uberjar
+lein uberjar
 
 java -jar target/{jarfile}.jar
 ```
+
+### Deploy on heroku
+
+heroku plugins:install java
+
+heroku create
+
+heroku deploy:jar target/curated-list-0.1.0-SNAPSHOT-standalone.jar
