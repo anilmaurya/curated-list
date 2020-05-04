@@ -17,8 +17,7 @@
   "scripts": {
     "lint": "eslint src",
     "start": "react-scripts start",
-    "watch": "./node_modules/.bin/watchify -v -o ../resources/public/app/js/bundle.js .",
-    "build": "react-scripts build && rm -rf ../resources/public/app/* && mv build/* ../resources/public/app/",
+    "build": "react-scripts build && rm -rf ../resources/public && mkdir -p ../resources/public/app && mv build/* ../resources/public/app/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
