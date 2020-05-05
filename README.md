@@ -1,9 +1,9 @@
-# List of Curated links using React / Clojure / Postgres
+# List of Curated links using Clojure / React / Postgres
 
 This project is inspired from https://github.com/cbegin/react-clojure-postgres-template
 
 This project can be used as template to implement a technology stack intended to bootstrap rapid
-development of a web application or web service based on React, Clojure
+development of a web application or web service based on Clojure, React 
 and Postgres.
 
 The resulting deployable artifact is a standalone executable JAR file which
